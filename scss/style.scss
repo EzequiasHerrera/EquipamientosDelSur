@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#imgPrecios {
+    width: 60px !important;
+}
+
+.ventanaPrecios {
+    height: 700px !important;
+
+    .imgInput {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .dosInputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .tit-input {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+
+}
+
+#ventanaCompra {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.432);
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.5s ease;
+
+    .ventana {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 30px;
+        height: 500px;
+        background-color: white;
+        position: fixed;
+        border-radius: 10px;
+        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.616);
+        text-align: center;
+
+        h2 {
+            margin-top: 10px;
+        }
+
+        #whatsapp_img {
+            width: 100%;
+        }
+
+        div {
+            width: 80%;
+        }
+
+        input {
+            background-color: #dadada;
+            border-style: none;
+            width: 100%;
+            height: 40px;
+            padding-left: 15px;
+            font-size: medium;
+            margin-top: 3px;
+        }
+
+        small {
+            color: red;
+            font-weight: bold;
+        }
+
+        .titulo_card {
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            font-size: larger;
+        }
+
+        #fecha {
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            background-color: #ddd;
+            width: 60%;
+        }
+
+        img {
+            width: 50%;
+            transition: 300ms;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .calendario {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .txtFecha {
+            margin: 10px;
+            text-align: center;
+            color: white;
+            font-size: larger;
+            border-radius: 3px;
+            background-color: #003feb;
+            padding: 8px;
+        }
+
+        .btn-confirmar {
+            padding: 15px;
+            text-align: center;
+            font-weight: bolder;
+            color: rgb(0, 0, 0);
+            border-radius: 3px;
+            border: none;
+            background-color: #dadada;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.356);
+            transition: 300ms;
+            margin: 5px;
+
+            &:hover {
+                cursor: pointer;
+                color: white;
+                background-color: #92C7A3;
+            }
+        }
+    }
+}
+
+button {
+    color: white;
+    background-color: #92C7A3;
+    padding: 15px;
+    border-radius: 5px;
+    border-style: none;
+
+    &:hover {
+        background-color: #64866f;
+        cursor: pointer;
+    }
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(230, 230, 230, 0.788);
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    background-color: rgb(221, 221, 221);
+
+    header {
+        position: fixed;
+        width: 100%;
+        background-color: #215A6D;
+        box-shadow: 0 1px 10px #00000044;
+
+        #titulo {
+            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .header_content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                width: 60px;
+                margin: 8px;
+            }
+
+            #btn_edit_prices {
+                color: white;
+                background-color: #cbf0ff;
+                margin: 10px;
+                padding: 15px;
+                border-radius: 600px;
+                border-style: none;
+
+                &:hover {
+                    background-color: #8bafbd;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+
+    main {
+        padding-top: 76px;
+
+        section {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+
+            aside {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                width: 22%;
+                padding-top: 30px;
+
+                .search_bar {
+                    width: 80%;
+                    display: flex;
+                    justify-content: space-around;
+                    background-color: white;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                    border-radius: 3px;
+                    margin-bottom: 50px;
+
+                    input {
+                        width: 100%;
+                        height: 40px;
+                        border-style: none;
+                        padding-left: 10px;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    .search_icon {
+                        width: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-left: 1px solid rgba(0, 0, 0, 0.274);
+                    }
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                list-style: none;
+                padding: 20px;
+                border-radius: 3px;
+                box-shadow: 0 1px black;
+                box-shadow: 0 1px 2px 1px #00000015;
+
+                li {
+                    margin: 5px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: rgb(59, 59, 59);
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+
+            .product_list {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                width: 100%;
+                padding: 20px;
+                gap: 15px;
+
+                .prueba {
+                    color: red;
+                }
+
+                a {
+                    text-decoration: none;
+
+                }
+
+                .card {
+                    width: 250px;
+                    height: 450px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    background-color: white;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 2px 1px #00000015;
+                    transition: box-shadow 50ms ease-in-out;
+
+                    &:hover {
+                        box-shadow: 0 1px 6px 5px #00000015;
+                    }
+
+                    img {
+                        width: 70%;
+                        height: 120px;
+                    }
+
+                    .card_text {
+                        color: rgb(24, 24, 24);
+                        padding: 15px;
+
+                        small {
+                            text-align: center;
+                            color: white;
+                            border-radius: 3px;
+                            background-color: #003feb;
+                            font-size: medium;
+                            padding: 6px;
+                            width: 100px;
+                        }
+                    }
+
+                    .art_name {
+                        width: 200px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        margin: 3px;
+                    }
+
+                    .art_desc {
+                        font-size: small;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+
+
+                }
+            }
+        }
+
+        .alquileres_list {
+            gap: 8px;
+            flex-wrap: wrap;
+
+            .card_alquiler {
+                padding: 20px;
+                margin: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: space-evenly;
+                color: black;
+                background-color: white;
+                border-radius: 3px;
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.336);
+                height: 500px;
+
+                .div-img {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .div-flex {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                img {
+                    width: 100px;
+                }
+
+                .btn-Borrar {
+                    padding: 5px;
+                    color: white;
+                    background-color: #ff4a32;
+                }
+            }
+        }
+
+        #whatsapp {
+            position: fixed;
+            right: 30px;
+            bottom: 5px;
+        }
+    }
+}
+
+footer {
+    background-color: white;
+
+    .footer_info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        section {
+            border-radius: 3px;
+            margin: 40px;
+
+            .footer_icon {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .line_v {
+            height: 60px;
+            width: 1px;
+            background-color: rgba(158, 158, 158, 0.425);
+        }
+    }
+}
+
+@media (max-width: 998px) {
+
+    .alquileres_list {
+        margin-top: 90px;
+    }
+
+    body {
+        header {
+            .header_content {
+                justify-content: center;
+            }
+        }
+
+        main {
+
+            #ventanaCompra .ventana {
+                width: 350px;
+            }
+
+            .formulario {
+                width: 700px !important;
+            }
+
+            section {
+                flex-direction: column;
+                align-items: center;
+
+                ul {
+                    width: 80%;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+
+                .product_list {
+                    justify-content: center;
+                }
+
+                aside {
+                    width: 100%;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 635px) {
+    body {
+        header {
+            .header_content {
+                flex-direction: column;
+            }
+        }
+
+        main {
+            section {
+                flex-direction: column;
+                align-items: center;
+
+                .product_list {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 554px) {
+    body {
+        main {
+            section {
+                .product_list {
+                    a {
+                        display: flex;
+                        justify-content: center;
+
+                        .card {
+                            width: 90%;
+
+                            img {
+                                height: auto;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
